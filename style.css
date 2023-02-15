@@ -150,7 +150,7 @@ form {
 }
 
 .input-area {
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.9rem;
 }
 
 input {
@@ -163,9 +163,12 @@ input {
   border: .2px solid rgb(92, 91, 91);
   padding-left: 18px;
 
-  border-color: var(--clr-red);
   border-width: .1rem;
-  /* margin-bottom: 1.8rem; */
+  /* input-border and warning color red on warning state  */
+  /* border-color: var(--clr-red); */
+
+  /* background url on warning state */
+  /* background : url('./images/icon-error.svg') no-repeat 95%; */
 }
 
 .btn-submit {

@@ -2,9 +2,10 @@ const submitButton = document.querySelector('.btn-submit');
 const inputs = document.querySelectorAll('.input');
 const warnings = document.querySelectorAll('.warning');
 
-submitButton.addEventListener('click', () => {
+submitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
     let inputError = checkInput();
-    console.log(inputError);
     if(inputError) {
         showWarning();
     }
@@ -12,7 +13,7 @@ submitButton.addEventListener('click', () => {
 
 function checkInput() {
     for(let input of inputs) {
-        if(input.value === '' || input.value === input.name) return true;
+        if(input.value === '') return true;
     }
     return false;
 }
@@ -21,4 +22,15 @@ function showWarning() {
     warnings.forEach((warning) => {
         warning.style.display = 'block';
     })
+
+    inputs.forEach(input => {
+        input.placeholder = '';
+        input.style.borderColor = 'hsl(0, 100%, 74%)';
+        input.style.background = "url('./images/icon-error.svg') no-repeat 95%";
+    });
+
+    const emailInput = document.querySelector('#email');
+    emailInput.value = 'email@example/com';
+    emailInput.style.color = 'hsl(0, 100%, 74%)';
+    emailInput.style.fontWeight = '500';
 }
