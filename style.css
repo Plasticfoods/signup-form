@@ -159,11 +159,12 @@ input {
   color: var(--clr-dark-blue);
   width: 100%;
   height: 3rem;
-  border-radius: 6px;
-  border: .2px solid rgb(92, 91, 91);
-  padding-left: 18px;
+  padding-left: 1.5em;
 
-  border-width: .1rem;
+  border-radius: 6px;
+  border-color: var(--clr-gray-blue);
+  border-width: 1.2px;
+
   /* input-border and warning color red on warning state  */
   /* border-color: var(--clr-red); */
 
