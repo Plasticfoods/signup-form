@@ -71,11 +71,10 @@ h6 {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url('./images/bg-intro-desktop.png');
+  /* background-image: url('./images/bg-intro-desktop.png'); */
   background-color: var(--clr-red);
   background-repeat: no-repeat;
   background-size:cover;
-
 }
 
 main {
@@ -86,6 +85,14 @@ main {
   padding: 4.6rem;
 }
 
+@media (max-width: 1000px) {
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0;
+  }
+}
+
 .first-section {
   display: flex;
   flex-direction:column;
@@ -94,6 +101,7 @@ main {
 
   padding-left: 18%;
 }
+
 
 .title {
   color: white;
@@ -108,8 +116,33 @@ main {
   color: white;
   font-size: 16px;
   font-weight: 500;
-
+  
   padding-right: 5%;
+}
+
+@media (max-width: 1000px) {
+  .first-section {
+    /* background-color: #7eee6d; */
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 .5rem;
+    margin: 0;
+    margin-bottom: 1.2rem;
+    margin-top: 4.2rem;
+    padding-right: 20px;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0;
+  }
 }
 
 .second-section {
@@ -143,14 +176,14 @@ form {
 }
 
 .warning {
-    display:none;
-    color: var(--clr-red);
-    font-size: .8rem;
-    text-align: end;
+  display:none;
+  color: var(--clr-red);
+  font-size: .8rem;
+  text-align: end;
 }
 
 .input-area {
-    margin-bottom: 1.9rem;
+  margin-bottom: 1.9rem;
 }
 
 input {
@@ -164,7 +197,7 @@ input {
   border-radius: 6px;
   border-color: var(--clr-gray-blue);
   border-width: 1.2px;
-
+  
   /* input-border and warning color red on warning state  */
   /* border-color: var(--clr-red); */
 
@@ -203,4 +236,3 @@ input {
   text-decoration: none;
   cursor: pointer;
 }
-
