@@ -265,11 +265,8 @@ input {
     margin-bottom: 1.5rem;
   }
 
-  /* .title {
-    max-width: 433.513px;
+  input {
+    padding-left: 1rem;
+    font-size: .8rem;
   }
-  .description {
-    max-width: 492px;
-  } */
-
 }
